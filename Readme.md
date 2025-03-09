@@ -32,7 +32,8 @@ pip install -r requirements.txt
 ```
 
 4. **Set up environment variables:**
-   - Create a `.env` file in the project root and configure any required settings (e.g., `DEBUG`, `DATABASE_URL`, etc.).
+   - Rename the provided `.env.example` file to `.env`.
+   - Open the `.env` file and set the values for all keys as they are mandatory (e.g., `DJANGO_SECRET_KEY`, `DATABASE_URL`, etc.).
 
 5. **Apply migrations:**
 ```bash
@@ -75,7 +76,7 @@ todo/
 ### Additional Information
 
 - **Static Files:** Make sure your static files settings in `settings.py` are correctly configured.
-- **Environment Configuration:** Use a `.env` file to securely store sensitive settings.
+- **Environment Configuration:** Use the `.env` file to securely store sensitive settings.
 
 ### License
 MIT License
