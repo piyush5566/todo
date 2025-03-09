@@ -7,7 +7,6 @@ This project is a Django-based Todo application. It allows users to manage tasks
 - Create, update, and delete tasks
 - Django admin interface
 - Environment variable support with python-dotenv
-- Static file management with WhiteNoise
 
 ### Prerequisites
 - Python 3+
@@ -75,7 +74,7 @@ todo/
 
 ### Additional Information
 
-- **Static Files:** Static files are managed by WhiteNoise. Make sure your static files settings in `settings.py` are correctly configured.
+- **Static Files:** Make sure your static files settings in `settings.py` are correctly configured.
 - **Environment Configuration:** Use a `.env` file to securely store sensitive settings.
 
 ### License
