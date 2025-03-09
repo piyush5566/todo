@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+p {
+    color: #666;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-details {
+    flex-grow: 1;
+}
+
+/* Ensure horizontal alignment for icons */
+.task-icons {
+    display: flex;
+    flex-direction: row;
+    /* Explicitly set to row for horizontal alignment */
+    align-items: center;
+    /* Vertically center icons */
+    gap: 15px;
+    /* Uniform spacing between icons */
+    margin-left: 10px;
+    /* Space from task details */
+}
+
+/* Style for individual icons */
+.task-icons a,
+.task-icons form {
+    margin: 0;
+    /* Remove any default margins */
+    padding: 0;
+    /* Remove any default padding */
+    display: flex;
+    /* Ensure both a and form are flex items */
+    align-items: center;
+    justify-content: center;
+}
+
+.task-icons a,
+.icon-button {
+    text-decoration: none;
+    font-size: 20px;
+    color: #007BFF;
+    display: flex;
+    /* Center the icon content */
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    /* Equal width and height for a perfect circle */
+    height: 32px;
+    /* Equal width and height for a perfect circle */
+    line-height: 32px;
+    /* Match height to center emoji vertically */
+    border-radius: 50%;
+    /* Circular shape */
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    /* Remove padding to ensure circle shape */
+}
+
+/* Ensure consistent size for icon content (emoji or images) */
+.task-icons a img,
+.icon-button img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* Hover effect */
+.task-icons a:hover,
+.icon-button:hover {
+    color: #fff;
+    background-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    width: 32px;
+    /* Reinforce dimensions on hover */
+    height: 32px;
+    /* Reinforce dimensions on hover */
+    border-radius: 50%;
+    /* Ensure circle on hover */
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tasks</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/tasks.css' %}">
+</head>
+
+<body>
+    <h1>Tasks</h1>
+    <button onclick="window.location.href='/tasks/create'">Create a task</button>
+    <ul>
+        {% for task in tasks %}
+        <li class="task-item">
+            <div class="task-details">
+                <h2>{{ task.title }}</h2>
+                <p>Description: {{ task.description }}</p>
+            </div>
+            <div class="task-icons">
+                <a href="{% url 'update_task' task.id %}" title="Edit Task">✏️</a>
+                <form action="{% url 'delete_task' task.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="icon-button" title="Delete Task">🗑️</button>
+                </form>
+            </div>
+        </li>
+        {% empty %}
+        <li>No tasks found.</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

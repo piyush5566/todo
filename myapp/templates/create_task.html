@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% if form.instance.id %}Update Task{% else %}Create Task{% endif %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/create_task.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>{% if form.instance.id %}Update Task{% else %}Create Task{% endif %}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">{% if form.instance.id %}Update{% else %}Create{% endif %}</button>
+        </form>
+    </div>
+</body>
+
+</html>
